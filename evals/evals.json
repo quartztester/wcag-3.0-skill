@@ -1,0 +1,23 @@
+{
+  "skill_name": "wcag-3.0-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Audit http://localhost:8080/ against WCAG 3.0 and tell me what fails. There's a dev server running on port 8080.",
+      "expected_output": "A structured audit report citing WCAG 3.0 requirement names with WCAG 2.2 mappings, evidence (selectors/pages), Core vs Supplemental classification, a manual-review section, and no false conformance claims. Report comes before any fixes.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "My blog needs an accessibility check before I show it to people. It's running at http://localhost:8080/ and the source is at C:\\Users\\erikc\\OneDrive\\Desktop\\blog. Audit it against WCAG and fix what you find.",
+      "expected_output": "Both rendered-page audit (headless browser + axe) and source-level checks (reduced-motion, focus styles, viewport meta, templates emitting alt-less imgs). A prioritized report first; fixes applied only after asking for approval; re-verification diff after fixes.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "A low-vision reader emailed saying they can't read the text on my site at http://localhost:8080/ and tabbing around the homepage is confusing. Check what WCAG says about that and what I need to change.",
+      "expected_output": "Focused pass on contrast (2.2.1 / SC 1.4.3) and focus indicators + heading/focus order (2.3.1, 2.3.3 / SC 2.4.11, 2.4.3) with measured contrast ratios and specific CSS fixes proposed, referencing WCAG 3 requirements and 2.2 SCs.",
+      "files": []
+    }
+  ]
+}

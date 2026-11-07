@@ -1,0 +1,15 @@
+{
+  "name": "wcag-3.0-skill",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Audit a website against WCAG 3.0 (WD) with WCAG 2.2 mapping",
+  "scripts": {
+    "audit": "node scripts/audit.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "axe-core": "^4.10.0",
+    "playwright": "^1.49.0"
+  }
+}
